@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Link Decorate Example</title>
+</head>
+
+<body>
+  <div>
+    <h1>aタグ リンク修正の検証 - LP</h1>
+  </div>
+  <div>
+    <p><a href="./page_1.html">サイト内のリンク: ./page.html</a></p>
+    <!-- Github Pagesの場合、サイト内リンクになる -->
+    <p><a href="https://fancs-r-yamashiro.github.io/sample-web/link/page.html">サイト内のリンク: Github Pagesのリンク</a></p>
+    <!-- localtest.me:8080の場合、 ページ内リンクになる -->
+    <p><a href="http://localtest.me:8080/link/page.html">サイト内のリンク: localtest.me:8080</a></p>
+    <!-- 現在のディレクトリのTOPページ -->
+    <p><a href="./">サイト内のリンク: ./</a></p>
+    <!-- 1つ上のページ -->
+    <p><a href="../">サイト内のリンク: 1つ上のページ</a></p>
+    <!-- 2つ上のページ -->
+    <p><a href="../../">サイト内のリンク: 2つ上のページ</a></p>
+    <!-- href属性無し -->
+    <p><a>ページ内のリンク: href属性無し</a></p>
+    <!-- href属性の値が空 -->
+    <p><a href="">ページ内のリンク: href属性の値が空</a></p>
+    <!-- ページ内の移動 -->
+    <p><a href="#hoge">ページ内のリンク: #hoge</a></p>
+  </div>
+  <div>
+    <p><a href="https://www.a8.net/">外部サイトのリンク: www.a8.net/</a></p>
+    <p><a href="https://www.a8.net/campus/?utm_source=beforeLoginFooter&utm_medium=button&utm_campaign=campus">外部サイトのリンク: www.a8.net/ クエリパラメータ有り</a></p>
+    <p><a href="https://www.instagram.com/a8net_official/">外部サイトのリンク: www.instagram.com/a8net_official</a></p>
+  </div>
+  <div>
+    <p><a href="https://px.a8.net/svt/ejp?a8mat=1O35Y8+CL2W4Y+H8+BW0YB&a8ejpredirect=https%3A%2F%2Fwww.a8.net%2F">広告リンク: px.a8.net/svt/ejp?a8mat=1O35Y8+CL2W4Y+H8+BW0YB&a8ejpredirect=https%3A%2F%2Fwww.a8.net%2F</a></p>
+    <p><a href="https://px.a8.net/svt/ejp?a8mat=1O35Y8+CL2W4Y+H8+BW0YB&a8ejpredirect=https%3A%2F%2Fwww.a8.net%2Fec%2Fabout%2F%3Futm_source%3Da8net%26utm_medium%3Dreferral">広告のリンク: px.a8.net/svt/ejp?a8mat=1O35Y8+CL2W4Y+H8+BW0YB&a8ejpredirect=https%3A%2F%2Fwww.a8.net%2Fec%2Fabout%2F%3Futm_source%3Da8net%26utm_medium%3Dreferral</a></p>
+    <p><a href="https://px.a8.net/svt/ejp?a8mat=1O35Y8+CL2W4Y+H8+BW0YB&a8ejpredirect=https%3A%2F%2Fwww.a8.net%2Fec%2Ffee%2F%3Futm_source%3Da8net%26utm_medium%3Dreferral">広告のリンク: px.a8.net/svt/ejp?a8mat=1O35Y8+CL2W4Y+H8+BW0YB&a8ejpredirect=https%3A%2F%2Fwww.a8.net%2Fec%2Ffee%2F%3Futm_source%3Da8net%26utm_medium%3Dreferral</a></p>
+  </div>
+  <script type="text/javascript" src="https://s3.ap-northeast-1.amazonaws.com/test-statics.a8.net/a8link/a8link-development.js"></script>
+  <script type="text/javascript">
+    a8LinkQueryParams({
+      "adParams": [
+        { "adService": "meta", "idParam": "id1" },
+        { "adService": "tiktok", "idParam": "id2" },
+        { "adService": "google", "idParam": "id3" }
+      ]
+    });
+  </script>
+</body>
+
+</html>
