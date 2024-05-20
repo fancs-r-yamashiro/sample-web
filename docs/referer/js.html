@@ -26,8 +26,11 @@
     // それぞれのリンクに対して処理を行う
     links.forEach(function (link) {
       // 同一Originの場合はno-referrer-whendowngradeを設定
+      // link.referrerpolicy = 'no-referrer-when-downgrade';
       link.referrerPolicy = 'no-referrer-when-downgrade';
     });
+
+    console.log(`referrerPolicyを設定しました`);
   </script>
 </body>
 
