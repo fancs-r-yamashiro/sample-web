@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>linkmgr a16110207602</title>
+  <script src="https://s3.ap-northeast-1.amazonaws.com/test-statics.a8.net/a8link/a8linkmgr-development.js"></script>
+  <script>
+    a8linkmgr({
+      "config_id": "Jsue7xCXOff8PTDUJqYL"
+    });
+  </script>
+</head>
+<body>
+  <div>
+    <h1>linkmgr test</h1>
+    <p>a02050806266</p>
+  </div>
+
+  <div>
+    <table border="1">
+      <thead>
+        <th>URL(aタグ)</th>
+        <th>期待する結果</th>
+        <th>備考</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href="https://www.a8.net/">https://www.a8.net/</a></td>
+          <td>変換される</td>
+          <td>広告主サイトURLに前方一致</td>
+        </tr>
+        <tr>
+          <td><a href="https://www.a8.net/hoge">https://www.a8.net/hoge</a></td>
+          <td>変換される</td>
+          <td>広告主サイトURLに前方一致</td>
+        </tr>
+        <tr>
+          <td><a href="https://www.a8.net?p=hoge">https://www.a8.net?p=hoge</a></td>
+          <td>変換される</td>
+          <td>広告主サイトURLに前方一致 クエリ含む</td>
+        </tr>
+        <tr>
+          <td><a href="https://www.a8.net">https://www.a8.net</a></td>
+          <td>変換される</td>
+          <td>a.hrefに末尾の/が含まれない</td>
+        </tr>
+        <tr>
+          <td><a href="//www.a8.net">//www.a8.net</a></td>
+          <td>変換される</td>
+          <td>相対プロトコル</td>
+        </tr>
+        <tr>
+          <td><a href="http://www.a8.net/">http://www.a8.net/</a></td>
+          <td>変換される</td>
+          <td>広告主サイトURLに前方一致</td>
+        </tr>
+        <tr>
+          <td><a href="https://site1.localhost.me/">https://site1.localhost.me/</a></td>
+          <td>変換される</td>
+          <td>登録されていない広告主サイトURL</td>
+        </tr>
+        <tr>
+          <td><a href="https://test-www.a8.net">https://test-www.a8.net</a></td>
+          <td>変換されない</td>
+          <td>広告主サイトURLに前方一致</td>
+        </tr>
+        <tr>
+          <td><a href="https://example.a8.net/aaa">https://example.a8.net/aaa</a></td>
+          <td>変換されない</td>
+          <td>登録されていない広告主サイトURL</td>
+        </tr>
+        <tr>
+          <td><a href="https://px.a8.net/aaa">https://px.a8.net/aaa</a></td>
+          <td>変換されない</td>
+          <td>リファラポリシーの設定が更新される</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
